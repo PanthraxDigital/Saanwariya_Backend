@@ -17,9 +17,12 @@ exports = module.exports = function (app) {
 	// Views
 	// app.get('/', routes.views.index);
 	app.all('/api*', keystone.middleware.cors);
+
+	// Book Now
 	app.post('/api/BookNow', routes.api.BookNow.create);
 	app.get('/api/BookNow', routes.api.BookNow.list);
 
+	// Contact
 	app.post('/api/Contact', routes.api.Contact.create);
 	app.get('/api/Contact', routes.api.Contact.list);
 
