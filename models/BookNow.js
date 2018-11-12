@@ -1,9 +1,8 @@
 /* eslint-disable comma-spacing */
 var keystone = require('keystone');
-var Types = keystone.Field.Types;
+// var Types = keystone.Field.Types;
 
 var BookNow = new keystone.List('BookNow',{
-	nocreate: true,
 	perPage: 50,
 });
 
@@ -15,4 +14,5 @@ BookNow.add({
 	child: { type: String },
 });
 
+BookNow.defaultColumns = 'phone, checkIn, checkout, adult, child';
 BookNow.register();

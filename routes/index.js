@@ -9,11 +9,18 @@ keystone.pre('render', middleware.flashMessages);
 // Import Route Controllers
 var routes = {
 	views: importRoutes('./views'),
+	api: importRoutes('./api'),
 };
 
 // Setup Route Bindings
 exports = module.exports = function (app) {
 	// Views
-	app.get('/', routes.views.index);
+	// app.get('/', routes.views.index);
+	app.all('/api*', keystone.middleware.cors);
+	app.post('/api/BookNow', routes.api.BookNow.create);
+	app.get('/api/BookNow', routes.api.BookNow.list);
+
+	app.post('/api/Contact', routes.api.Contact.create);
+	app.get('/api/Contact', routes.api.Contact.list);
 
 };
