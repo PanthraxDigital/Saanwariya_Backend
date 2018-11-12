@@ -39,6 +39,7 @@ keystone.set('locals', {
 	editable: keystone.content.editable,
 });
 keystone.set('routes', require('./routes'));
+keystone.set('signin logo', '../PDA_logo.png');
 
 keystone.set('nav', {
 	users: 'users',
