@@ -17,6 +17,7 @@ keystone.init({
 	'views': 'templates/views',
 	'view engine': '.hbs',
 	'port' : '4004',
+	'cookie secret': 'e6f367201256d6b6959f222754a4ab27',
 	'custom engine': handlebars.create({
 		layoutsDir: 'templates/views/layouts',
 		partialsDir: 'templates/views/partials',
