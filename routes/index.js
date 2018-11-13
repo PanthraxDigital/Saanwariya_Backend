@@ -17,7 +17,10 @@ exports = module.exports = function (app) {
 	// Views
 	app.get('/', routes.views.index);
 	app.all('/api*', keystone.middleware.cors);
-
+	app.options('/api*', function (req, res) {
+		res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-XSRF-TOKEN');
+		res.sendStatus(200);
+	});
 	// Book Now
 	app.post('/api/BookNow', routes.api.BookNow.create);
 	app.get('/api/BookNow', routes.api.BookNow.list);

@@ -32,6 +32,7 @@ keystone.init({
 	'user model': 'User',
 });
 keystone.import('models');
+keystone.set('cors allow origin', true);
 keystone.set('locals', {
 	_: require('lodash'),
 	env: keystone.get('env'),
