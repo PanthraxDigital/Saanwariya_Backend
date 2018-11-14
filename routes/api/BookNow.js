@@ -14,20 +14,20 @@ exports.create = function (req, res) {
 		if (err) return res.json({ error: err });
 
 		res.json({
-			result: item,
+			result: 'success',
 		});
 
 	});
 };
 
-exports.list = function (req, res) {
-	BookNow.model.find(function (err, items) {
+// exports.list = function (req, res) {
+// 	BookNow.model.find(function (err, items) {
 
-	if (err) return res.json({ err: err });
+// 	if (err) return res.json({ err: err });
 
-	res.json({
-		people: items,
-	});
+// 	res.json({
+// 		result: 'success',
+// 	});
 
-	});
-};
+// 	});
+// };
