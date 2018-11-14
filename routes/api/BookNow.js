@@ -13,9 +13,9 @@ exports.create = function (req, res) {
 
 		if (err) return res.json({ error: err });
 
-		res.json({
-			result: 'success',
-		});
+		// res.json({
+		// 	result: 'success',
+		// });
 
 	});
 };
