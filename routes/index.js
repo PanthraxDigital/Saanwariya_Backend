@@ -23,10 +23,10 @@ exports = module.exports = function (app) {
 	});
 	// Book Now
 	app.post('/api/BookNow', routes.api.BookNow.create);
-	app.get('/api/BookNow', routes.api.BookNow.list);
+	// app.get('/api/BookNow', routes.api.BookNow.list);
 
 	// Contact
 	app.post('/api/Contact', routes.api.Contact.create);
-	app.get('/api/Contact', routes.api.Contact.list);
+	// app.get('/api/Contact', routes.api.Contact.list);
 
 };

@@ -1,5 +1,4 @@
 var keystone = require('keystone');
-var Types = keystone.Field.Types;
 
 var Contact = new keystone.List('Contact', {
 	nocreate: true,
@@ -15,4 +14,5 @@ Contact.add({
 	message: { type: String },
 });
 
+Contact.defaultColumns = 'name, email, phone, subject, message';
 Contact.register();
