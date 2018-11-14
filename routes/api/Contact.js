@@ -11,9 +11,9 @@ exports.create = function (req, res) {
 	item.getUpdateHandler(req).process(data, function (err) {
 		if (err) return res.json({ error: err });
 
-		// res.json({
-		// 	result: 'success',
-		// });
+		res.json({
+			result: 'success',
+		});
 	});
 };
 
